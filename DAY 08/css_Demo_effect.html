@@ -1,0 +1,234 @@
+<html>
+
+<head>
+    <title>Demo CSS3</title>
+    <style type="text/css">
+        .animate-charcter {
+            text-transform: uppercase;
+            background-image: linear-gradient(-225deg,
+                    #231557 0%,
+                    #44107a 29%,
+                    #ff1361 67%,
+                    #fff800 100%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+            font-size: 100px;
+
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        #OverFlowDiv {
+            overflow: auto;
+        }
+
+        .title-word {
+            animation: color-animation 4s linear infinite;
+        }
+
+        .title-word-1 {
+            --color-1: #DF8453;
+            --color-2: #3D8DAE;
+            --color-3: #E4A9A8;
+        }
+
+        .title-word-2 {
+            --color-1: #DBAD4A;
+            --color-2: #ACCFCB;
+            --color-3: #17494D;
+        }
+
+        .title-word-3 {
+            --color-1: #ACCFCB;
+            --color-2: #E4A9A8;
+            --color-3: #ACCFCB;
+        }
+
+        .title-word-4 {
+            --color-1: #3D8DAE;
+            --color-2: #DF8453;
+            --color-3: #E4A9A8;
+        }
+
+        @keyframes color-animation {
+            0% {
+                color: var(--color-1)
+            }
+
+            32% {
+                color: var(--color-1)
+            }
+
+            33% {
+                color: var(--color-2)
+            }
+
+            65% {
+                color: var(--color-2)
+            }
+
+            66% {
+                color: var(--color-3)
+            }
+
+            99% {
+                color: var(--color-3)
+            }
+
+            100% {
+                color: var(--color-1)
+            }
+        }
+
+        /* Here are just some visual styles. 🖌 */
+
+        .container {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            height: 10vh
+        }
+
+        .title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 200px;
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-top: 180px;
+        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+/* * { */
+  /* padding: 0; */
+  /* margin: 0;
+  margin-top: 200px;
+  box-sizing: border-box;
+} */
+
+body {
+  background-color:  #f1ede9;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.waviy {
+  /* position: relative; */
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 30px;
+  margin-top: 170px;
+  text-align: center;
+}
+.waviy2 {
+  /* position: relative; */
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 30px;
+  margin-top: 10px;
+  text-align: center;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  /* position: relative; */
+  display: inline-block;
+  color: rgb(63, 50, 245);
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+  
+}
+.waviy2 span {
+  font-family: 'Alfa Slab One', cursive;
+  /* position: relative; */
+  display: inline-block;
+  color: rgb(63, 50, 245);
+  text-transform: uppercase;
+  animation: waviy2 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+@keyframes waviy2 {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+    </style>
+</head>
+
+
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="animate-charcter"> css</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="title">
+            <span class="title-word title-word-1">There</span>
+            <span class="title-word title-word-2">are</span>
+            <span class="title-word title-word-3">two</span>
+            <span class="title-word title-word-4">types</span>
+            <span class="title-word title-word-4">of</span>
+            <span class="title-word title-word-4">CSS</span>
+        </h2>
+    </div>
+
+    <div class="waviy">
+        <span style="--i:1">1.</span>
+        <span style="--i:2">I</span>
+        <span style="--i:3">n</span>
+        <span style="--i:4">t</span>
+        <span style="--i:5">e</span>
+        <span style="--i:6">r</span>
+        <span style="--i:7">n</span>
+        <span style="--i:8">a</span>
+        <span style="--i:9">l</span>
+        
+     
+       </div>
+
+       <div class="waviy2">
+        <span style="--i:1">2.</span>
+        <span style="--i:2">E</span>
+        <span style="--i:3">x</span>
+        <span style="--i:4">t</span>
+        <span style="--i:5">e</span>
+        <span style="--i:6">r</span>
+        <span style="--i:7">n</span>
+        <span style="--i:8">a</span>
+        <span style="--i:9">l</span>
+        
+     
+       </div>
+
+
+</body>
+
+</html>

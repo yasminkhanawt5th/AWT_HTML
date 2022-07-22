@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $(".showbt").hide("fast");
+
+            $(".hidebt").click(function () {
+
+                $(".table").hide("fast");
+
+                $(".hidebt").hide("fast");
+
+                $(".showrow").hide("fast");
+
+                $(".hiderow").hide("fast");
+
+                $(".showbt").show("fast");
+
+            });
+
+            $(".showbt").click(function () {
+
+                $(".showrow").show("fast");
+
+                $(".hiderow").show("fast");
+
+                $(".hidebt").hide("fast");
+
+                $(".table").show("fast");
+
+                $(".showbt").hide("fast");
+
+                $(".hidebt").show("fast");
+
+            });
+
+            $(".hiderow").click(function () {
+
+                $(".row1").hide("fast");
+
+                $(".hiderow").hide("fast");
+
+                $(".showrow").show("fast");
+
+            });
+
+            $(".showrow").click(function () {
+
+                $(".row1").show("fast");
+
+                $(".hiderow").show("fast");
+
+                $(".showrow").hide("fast");
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="table">
+
+        <table border="1">
+
+            <tr>
+
+                <th class="row1">Company</th>
+
+                <th>Contact</th>
+
+                <th>Country</th>
+
+            </tr>
+
+            <tr>
+
+                <td class="row1">Alfreds Futterkiste</td>
+
+                <td>Maria Anders</td>
+
+                <td>Germany</td>
+
+            </tr>
+
+            <tr>
+
+                <td class="row1">Centro comercial Moctezuma</td>
+
+                <td>Francisco Chang</td>
+
+                <td>Mexico</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <p>
+
+        <button class="hidebt">Hide Table</button>
+
+        <button class="showbt">Show Table</button>
+
+        <button class="showrow">Show Row</button>
+
+        <button class="hiderow">Hide Row</button>
+
+    </p>
+
+</body>
+
+</html>
